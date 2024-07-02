@@ -3,18 +3,18 @@ import React from "react";
 const Navbar = () => {
     return(
         <>
-        <header className="bg-white h-24 pt-8 flex justify-around">
+        <header className="bg-white h-24 pt-8 flex justify-around shadow-md shadow-gray-300">
             {/* logo */}
             <a href="" className=""><i className="fa-solid fa-basket-shopping text-green-700 text-xl"></i><pan className="text-purple-800 text-xl font-bold">Grocery</pan></a>
 
             {/* Menu Bar */}
             <nav className="text-gray-700">
-                <a href="" className="pl-8 hover:text-green-800">Home</a>
-                <a href="" className="pl-8 hover:text-green-700">Features</a>
-                <a href="" className="pl-8 hover:text-green-700">Products</a>
-                <a href="" className="pl-8 hover:text-green-700">Categories</a>
-                <a href="" className="pl-8 hover:text-green-700">Review</a>
-                <a href="" className="pl-8 hover:text-green-700">Blogs</a>
+                <a href="" className="pl-8 hover:text-green-600">Home</a>
+                <a href="" className="pl-8 hover:text-green-600">Features</a>
+                <a href="" className="pl-8 hover:text-green-600">Products</a>
+                <a href="" className="pl-8 hover:text-green-600">Categories</a>
+                <a href="" className="pl-8 hover:text-green-600">Review</a>
+                <a href="" className="pl-8 hover:text-green-600">Blogs</a>
             </nav>
 
             {/* icons */}
