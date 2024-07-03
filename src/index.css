@@ -4,20 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    font-family: "Poppins", sans-serif;
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-}
-html{
-    scroll-behavior: smooth;
-    scroll-padding-top: 7rem;
-}
-body{
-    background: #eee;
+@layer base {
+    
+    :root{
+        --green: green;
+        --black: #130f40;
+        --light-color: #666;
+    }
+
+    *{
+        font-family: "Poppins", sans-serif;
+        @apply m-0 p-0 box-border outline-none border-none no-underline capitalize;
+    }
+    
+    html{
+        @apply scroll-smooth scroll-pt-28;
+    }
+
+    body{
+        @apply bg-[#eee];
+    }
 }
