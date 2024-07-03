@@ -1,14 +1,18 @@
 import React, { useState } from "react";
+import watermelon from "./assets/cart-img-1.png";
+import onion from "./assets/cart-img-2.png";
+import chicken from "./assets/cart-img-3.png";
 
 const Navbar = () => {
    
-    const [toggle , setToggle] = React.useState(false);
+    const [search , setSearch] = React.useState(false);
+    const [shopcart , setShopcart] = React.useState(false);
 
     return(
         <>
         <header className="bg-white h-24 pt-8 flex justify-around shadow-md shadow-gray-300">
             {/* logo */}
-            <a href="" className=""><i className="fa-solid fa-basket-shopping text-[--green] text-xl"></i><pan className="text-purple-800 text-xl font-bold">Grocery</pan></a>
+            <a href="" className=""><i className="fa-solid fa-basket-shopping text-[--green] text-xl"></i><pan className="text-purple-800 text-2xl font-bold">Grocery</pan></a>
 
             {/* Menu Bar */}
             <nav className="text-gray-700">
@@ -22,19 +26,55 @@ const Navbar = () => {
 
             {/* icons */}
             <div className="flex"> 
-                <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> setToggle(!toggle)}><i class="fa-solid fa-magnifying-glass"></i></div>
-                <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white"><i class="fa-solid fa-cart-shopping"></i></div>
+                <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> setSearch(!search)}><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> setShopcart(!shopcart)}><i class="fa-solid fa-cart-shopping"></i></div>
                 <div className="bg-gray-200 h-9 w-10 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white"><i class="fa-solid fa-user"></i></div>
             </div>
 
             {/* Seach Bar */}
             {
-                toggle ? <form className="absolute top-28 bg-white p-3 border rounded-lg w-96 text-gray-400 flex justify-between shadow-md shadow-gray-500 right-20">
+                search ? <form className="absolute top-28 bg-white p-3 border rounded-lg w-96 text-gray-400 flex justify-between shadow-md shadow-gray-500 right-20">
                 <input type="search" id="search-box" placeholder="Search here ....." className="normal-case"/>
                 <label for="search-box"><i className="fa-solid fa-magnifying-glass hover:text-[--green] font-bold text-lg"></i></label>
                 </form> : null
             }
-                 
+
+            {/* Shopping Cart */}
+            {
+                shopcart ? <div className="absolute top-28 bg-white p-3 border rounded-lg w-80 h-3/4 shadow-md shadow-gray-500 right-20">
+                <div className="flex justify-between mt-2 p-2">
+                    <img src={watermelon} className="w-24"/>
+                    <div className="mt-6  mr-8">
+                        <p className="font-bold text-[--black]">watermelon</p>
+                        <span className="text-[--light-color] text-sm">$5.99/-</span>
+                        <span className="text-[--light-color] text-sm ml-6"> Qty:1</span>
+                    </div>
+                    <i className="fa-solid fa-trash mt-8 text-[--light-color] mr-4 text-lg"></i>
+                </div>
+                <div className="flex justify-between p-2">
+                    <img src={onion} className="w-24"/>
+                    <div className="mt-6  mr-8">
+                        <p className="font-bold text-[--black]">Onion</p>
+                        <span className="text-[--light-color] text-sm">$4.99/-</span>
+                        <span className="text-[--light-color] text-sm ml-6"> Qty:1</span>
+                    </div>
+                    <i className="fa-solid fa-trash mt-8 text-[--light-color] mr-4 text-lg"></i>
+                </div>
+                <div className="flex justify-between p-2">
+                    <img src={chicken} className="w-24"/>
+                    <div className="mt-6  mr-8">
+                        <p className="font-bold text-[--black]">Chicken</p>
+                        <span className="text-[--light-color] text-sm">$4.99/-</span>
+                        <span className="text-[--light-color] text-sm ml-6"> Qty:1</span>
+                    </div>
+                    <i className="fa-solid fa-trash mt-8 text-[--light-color] mr-4 text-lg"></i>
+                </div>
+                <div className="p-2">
+                    <p className="text-center text-2xl text-[--black]">Total : $17.95/-</p>
+                    <button className="btn w-full ">Checkout</button>
+                </div>
+            </div> : null 
+            }    
         </header>
         </>
     );
