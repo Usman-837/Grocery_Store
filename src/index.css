@@ -24,4 +24,9 @@
     body{
         @apply bg-[#eee];
     }
+
+    header .search-form.active{
+        @apply right-20;
+        transition: all .3s linear;
+    }
 }

@@ -1,6 +1,8 @@
 import React from "react";
+import "./script.js";
 
 const Navbar = () => {
+
     return(
         <>
         <header className="bg-white h-24 pt-8 flex justify-around shadow-md shadow-gray-300">
@@ -25,7 +27,7 @@ const Navbar = () => {
             </div>
 
             {/* Seach Bar */}
-            <form className="search-form absolute top-28 bg-white p-3 border rounded-lg w-96 text-gray-400 flex justify-between shadow-md shadow-gray-500 right-20">
+            <form className="search-form absolute top-28 bg-white p-3 border rounded-lg w-96 text-gray-400 flex justify-between shadow-md shadow-gray-500 right-[-100%]">
                 <input type="search" name="" id="search-box" placeholder="Search here ....." className="normal-case"/>
                 <label for="search-box"><i className="fa-solid fa-magnifying-glass hover:text-[--green] font-bold text-lg"></i></label>
             </form>
