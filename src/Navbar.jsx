@@ -27,6 +27,7 @@ const Navbar = () => {
 
             {/* icons */}
             <div className="flex"> 
+                <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white hidden"><i class="fa-solid fa-bars"></i></div>
                 <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> setSearch(!search)}><i class="fa-solid fa-magnifying-glass"></i></div>
                 <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> setShopcart(!shopcart)}><i class="fa-solid fa-cart-shopping"></i></div>
                 <div className="bg-gray-200 h-9 w-10 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> setLogin(!login)}><i class="fa-solid fa-user"></i></div>
