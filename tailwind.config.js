@@ -6,6 +6,13 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        '2xl': {'max': '1535px'},
+        'xl': {'max': '1279px'},
+        'lg': {'max': '1199px'},
+        'md': {'max': '991px'},
+        'sm': {'max': '768px'},
+      }
     },
   },
   plugins: [],

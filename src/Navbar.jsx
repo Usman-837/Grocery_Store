@@ -8,6 +8,7 @@ const Navbar = () => {
     const [search , setSearch] = React.useState(false);
     const [shopcart , setShopcart] = React.useState(false);
     const [login , setLogin] = React.useState(false);
+    const [menu , setMenu] = React.useState(false);
 
     return(
         <>
@@ -16,7 +17,7 @@ const Navbar = () => {
             <a href="" className=""><i className="fa-solid fa-basket-shopping text-[--green] text-xl"></i><pan className="text-purple-800 text-2xl font-bold">Grocery</pan></a>
 
             {/* Menu Bar */}
-            <nav className="text-gray-700">
+            <nav className="text-gray-700 md:hidden">
                 <a href="#" className="pl-8 hover:text-green-600">Home</a>
                 <a href="#" className="pl-8 hover:text-green-600">Features</a>
                 <a href="#" className="pl-8 hover:text-green-600">Products</a>
@@ -24,13 +25,13 @@ const Navbar = () => {
                 <a href="#" className="pl-8 hover:text-green-600">Review</a>
                 <a href="#" className="pl-8 hover:text-green-600">Blogs</a>
             </nav>
-
+          
             {/* icons */}
             <div className="flex"> 
-                <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white hidden"><i class="fa-solid fa-bars"></i></div>
                 <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> setSearch(!search)}><i class="fa-solid fa-magnifying-glass"></i></div>
                 <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> setShopcart(!shopcart)}><i class="fa-solid fa-cart-shopping"></i></div>
-                <div className="bg-gray-200 h-9 w-10 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> setLogin(!login)}><i class="fa-solid fa-user"></i></div>
+                <div className="bg-gray-200 h-9 w-10 mr-2  boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> setLogin(!login)}><i class="fa-solid fa-user"></i></div>
+                <div className="bg-gray-200 h-9 w-10 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white hidden md:block" onClick={()=> setMenu(!menu)}><i class="fa-solid fa-bars"></i></div>
             </div>
 
             {/* Seach Bar */}
@@ -92,6 +93,18 @@ const Navbar = () => {
                     </div>
                 </div>
             </div> : null
+            }
+
+            {/* Responsive Menu Bar */}
+            {
+                menu ?   <nav className="text-gray-700 md:absolute md:flex flex-col md:top-24 md:left-0 md:bg-white md:w-full md:py-4 md:shadow-md md:shadow-gray-300">
+                <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Home</a>
+                <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Features</a>
+                <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Products</a>
+                <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Categories</a>
+                <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Review</a>
+                <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Blogs</a>
+            </nav> : null
             }         
         </header>
         </>
