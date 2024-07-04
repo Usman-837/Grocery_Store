@@ -97,7 +97,7 @@ const Navbar = () => {
 
             {/* Responsive Menu Bar */}
             {
-                menu ?   <nav className="text-gray-700 md:absolute md:flex flex-col md:top-24 md:left-0 md:bg-white md:w-full md:py-4 md:shadow-md md:shadow-gray-300">
+                menu ? <nav className="text-gray-700 md:absolute md:flex flex-col md:top-24 md:left-0 md:bg-white md:w-full md:py-4 md:shadow-md md:shadow-gray-300 hidden">
                 <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Home</a>
                 <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Features</a>
                 <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Products</a>
