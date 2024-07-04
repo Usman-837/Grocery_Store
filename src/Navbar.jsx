@@ -36,7 +36,7 @@ const Navbar = () => {
 
             {/* Seach Bar */}
             {
-                search ? <form className="absolute top-28 bg-white p-3 border rounded-lg w-96 text-gray-400 flex justify-between shadow-md shadow-gray-500 right-20">
+                search ? <form className="absolute top-28 bg-white p-3 border rounded-lg w-96 text-gray-400 flex justify-between shadow-md shadow-gray-500 right-20 sm:right-0 sm:w-full">
                 <input type="search" id="search-box" placeholder="Search here ....." className="normal-case"/>
                 <label for="search-box"><i className="fa-solid fa-magnifying-glass hover:text-[--green] font-bold text-lg"></i></label>
                 </form> : null
