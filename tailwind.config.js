@@ -12,7 +12,10 @@ export default {
         'lg': {'max': '1199px'},
         'md': {'max': '991px'},
         'sm': {'max': '768px'},
-      }
+      },
+      backgroundImage: {
+        'banner-img': "url('./assets/banner-img.jpg')"
+      },
     },
   },
   plugins: [],
