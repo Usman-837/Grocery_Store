@@ -14,7 +14,7 @@ const Navbar = () => {
         <>
         <header className="bg-white h-24 pt-8 flex justify-around shadow-md shadow-gray-300">
             {/* logo */}
-            <a href="" className=""><i className="fa-solid fa-basket-shopping text-[--green] text-xl"></i><pan className="text-purple-800 text-2xl font-bold">Grocery</pan></a>
+            <a href="" className=""><i className="fa-solid fa-basket-shopping text-[--green] text-xl"></i><span className="text-purple-800 text-2xl font-bold">Grocery</span></a>
 
             {/* Menu Bar */}
             <nav className="text-gray-700 md:hidden">
@@ -28,10 +28,10 @@ const Navbar = () => {
           
             {/* icons */}
             <div className="flex"> 
-                <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> {setSearch(!search); setShopcart(false); setLogin(false); setMenu(false)}}><i class="fa-solid fa-magnifying-glass"></i></div>
-                <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> {setShopcart(!shopcart); setSearch(false); setLogin(false); setMenu(false)}}><i class="fa-solid fa-cart-shopping"></i></div>
-                <div className="bg-gray-200 h-9 w-10 mr-2  boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> {setLogin(!login); setSearch(false); setShopcart(false); setMenu(false)}}><i class="fa-solid fa-user"></i></div>
-                <div className="bg-gray-200 h-9 w-10 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white hidden md:block" onClick={()=> {setMenu(!menu); setSearch(false); setShopcart(false); setLogin(false)}}><i class="fa-solid fa-bars"></i></div>
+                <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> {setSearch(!search); setShopcart(false); setLogin(false); setMenu(false)}}><i className="fa-solid fa-magnifying-glass"></i></div>
+                <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> {setShopcart(!shopcart); setSearch(false); setLogin(false); setMenu(false)}}><i className="fa-solid fa-cart-shopping"></i></div>
+                <div className="bg-gray-200 h-9 w-10 mr-2  boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> {setLogin(!login); setSearch(false); setShopcart(false); setMenu(false)}}><i className="fa-solid fa-user"></i></div>
+                <div className="bg-gray-200 h-9 w-10 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white hidden md:block" onClick={()=> {setMenu(!menu); setSearch(false); setShopcart(false); setLogin(false)}}><i className="fa-solid fa-bars"></i></div>
             </div>
 
             {/* Seach Bar */}
