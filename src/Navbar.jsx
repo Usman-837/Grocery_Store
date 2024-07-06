@@ -44,7 +44,7 @@ const Navbar = () => {
             
             {/* Shopping Cart */}
             {
-                shopcart ? <div className="absolute top-28 bg-white p-3 border rounded-lg w-80 shadow-md shadow-gray-500 right-20">
+                shopcart ? <div className="absolute top-28 bg-white p-3 border rounded-lg w-80 shadow-md shadow-gray-500 right-20 sm:right-12">
                 <div className="flex justify-between mt-2 p-2">
                     <img src={watermelon} className="w-24"/>
                     <div className="mt-6  mr-8">
@@ -81,7 +81,7 @@ const Navbar = () => {
 
             {/* login Page    */}
             {
-                login ?  <div className="absolute top-28 bg-white border rounded-lg w-[360px] shadow-md shadow-gray-500 right-20">
+                login ?  <div className="absolute top-28 bg-white border rounded-lg w-[360px] shadow-md shadow-gray-500 right-20 sm:right-10">
                 <div className="flex flex-col justify-center p-8">
                     <h1 className="text-center font-bold text-[--black] text-2xl uppercase mb-4">login now</h1>
                     <input type="email" placeholder="Enter your email" className="bg-gray-200 rounded-md p-2 text-[--light-color] normal-case mb-4"/>
