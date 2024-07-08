@@ -23,7 +23,7 @@
 
     body{
         @apply bg-[#eee];
-    }
+    } 
 }
 
 @layer components{
@@ -41,5 +41,17 @@
     .btn:hover{
         background: var(--green);
         color: white;
+    }
+    .heading{
+        padding: 2rem 0;
+        padding-bottom: 3rem;
+        font-size: 2.2rem;
+        color: var(--black);
+    }
+    .heading span{
+        background: var(--green);
+        color: white;
+        padding: .5rem 2rem;
+        clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0 100%, 7% 50%, 0 0%); 
     }
 }
