@@ -8,8 +8,8 @@ const Features = () => {
         <>
         <section className="pt-14 pb-10">
             <h1 className="heading font-bold text-center">Our <span>Features</span></h1>
-            <div className="flex justify-center gap-6 text-[--black]">
-                <div className="bg-white w-[500px] p-4 rounded-md">
+            <div className="flex justify-center flex-wrap gap-6 text-[--black]">
+                <div className="bg-white w-[500px] p-4 rounded-md shadow-xl hover:shadow-[--green]">
                     <div className="text-center border-2 border-solid border-black p-4">
                         <div className="flex justify-center">
                             <img src={feature1} className="py-4"/>
@@ -19,7 +19,7 @@ const Features = () => {
                             <button className="btn">Read More</button>
                     </div>
                 </div>
-                <div className="bg-white w-[500px] p-4 rounded-md">
+                <div className="bg-white w-[500px] p-4 rounded-md shadow-xl hover:shadow-[--green]">
                     <div className="text-center border-2 border-solid border-black p-4">
                         <div className="flex justify-center">
                             <img src={feature2} className="py-6"/>
@@ -29,7 +29,7 @@ const Features = () => {
                             <button className="btn">Read More</button>
                     </div>
                 </div>
-                <div className="bg-white w-[500px] p-4 rounded-md">
+                <div className="bg-white w-[500px] p-4 rounded-md shadow-xl hover:shadow-[--green]">
                     <div className="text-center border-2 border-solid border-black p-4">
                         <div className="flex justify-center">
                             <img src={feature3} className="py-4"/>
