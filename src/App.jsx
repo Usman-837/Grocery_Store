@@ -4,6 +4,7 @@ import Banner from "./Banner"
 import Features from "./Features"
 import Products from "./Products"
 import Categories from "./Categories"
+import Review from "./Review"
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Features/>
         <Products/>
         <Categories/>
+        <Review/>
     </>
   );
 }
