@@ -5,7 +5,7 @@ import payemnt from "./assets/payment.png";
 const Footer = () => {
     return(
         <>
-            <footer className="bg-white pt-10 pb-20">
+            <footer className="bg-white pt-10 pb-14">
                 <div className="flex justify-center flex-wrap gap-40">
                     <div>
                         <a><span className="text-2xl font-bold text-[--black]">Groco </span><i className="fa-solid fa-basket-shopping text-[--green] text-xl"></i></a>
@@ -44,6 +44,10 @@ const Footer = () => {
                         <a href="#" className="btn mt-6">subscribe</a>
                         <img src={payemnt} className="mt-6"/>
                     </div>
+                </div>
+                <div className="pt-12">
+                    <hr className="border-b-1 border-solid border-gray-500 mx-44"/>
+                    <p className="text-center pt-4">created by <span className="text-[--green]">muhammad usman</span> | all rights reserved</p>
                 </div>
             </footer>
         </>
