@@ -6,6 +6,8 @@ import Products from "./Products";
 import Categories from "./Categories";
 import Review from "./Review";
 import Blogs from "./Blogs";
+import Footer from "./Footer";
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Categories/>
         <Review/>
         <Blogs/>
+        <Footer/>
     </>
   );
 }
