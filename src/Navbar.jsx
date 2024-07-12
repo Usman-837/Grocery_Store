@@ -81,7 +81,7 @@ const Navbar = () => {
 
             {/* login Page    */}
             {
-                login ?  <div className="absolute top-28 bg-white border rounded-lg w-[360px] small:w-[260px] shadow-md shadow-gray-500 large:right-16 small:right-4 x-large:right-24 2x-large:right-28 right-32">
+                login ?  <div className="absolute top-28 bg-white border rounded-lg w-[360px] small:w-[260px] shadow-md shadow-gray-500 small:right-4 large:right-16 x-large:right-24 2x-large:right-28 right-32">
                 <div className="flex flex-col justify-center p-8 small:p-4">
                     <h1 className="text-center font-bold text-[--black] text-2xl small:text-xl uppercase mb-4">login now</h1>
                     <input type="email" placeholder="Enter your email" className="bg-[#eee] rounded-md p-2 text-[--light-color] normal-case mb-4 small:text-sm"/>
@@ -97,13 +97,13 @@ const Navbar = () => {
 
             {/* Responsive Menu Bar */}
             {
-                menu ? <nav className="text-gray-700 md:absolute md:flex flex-col md:top-24 md:left-0 md:bg-white md:w-full md:py-4 md:shadow-md md:shadow-gray-300 hidden">
-                <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Home</a>
-                <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Features</a>
-                <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Products</a>
-                <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Categories</a>
-                <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Review</a>
-                <a href="#" className="pl-8 hover:text-green-600 md:hover:bg-[--green] md:hover:text-white md:mb-1">Blogs</a>
+                menu ? <nav className="text-gray-700 medium:absolute medium:flex flex-col medium:top-24 medium:left-0 medium:bg-white medium:w-full medium:py-4 medium:shadow-md medium:shadow-gray-300 hidden small:text-sm">
+                <a href="#home" className="pl-8 hover:text-green-600 medium:hover:bg-[--green] medium:hover:text-white medium:mb-1">Home</a>
+                <a href="#features" className="pl-8 hover:text-green-600 medium:hover:bg-[--green] medium:hover:text-white medium:mb-1">Features</a>
+                <a href="#products" className="pl-8 hover:text-green-600 medium:hover:bg-[--green] medium:hover:text-white medium:mb-1">Products</a>
+                <a href="#categories" className="pl-8 hover:text-green-600 medium:hover:bg-[--green] medium:hover:text-white medium:mb-1">Categories</a>
+                <a href="#review" className="pl-8 hover:text-green-600 medium:hover:bg-[--green] medium:hover:text-white medium:mb-1">Review</a>
+                <a href="#blogs" className="pl-8 hover:text-green-600 medium:hover:bg-[--green] medium:hover:text-white medium:mb-1">Blogs</a>
             </nav> : null
             }         
         </header>
