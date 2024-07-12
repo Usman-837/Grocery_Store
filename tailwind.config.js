@@ -7,13 +7,13 @@ export default {
   theme: {
     extend: {
       screens: {
-        '3xl': {'max': '1535px'},
-        '2xl': {'max': '1199px'},
-        'xl': {'max': '1024px'},
-        'lg': {'max': '991px'},
-        'md': {'max': '768px'},
-        'sm': {'max': '480px'},
-        'xs':{'max': '320px'}
+        '3x-large': {'max': '1535px'},
+        '2x-large': {'max': '1199px'},
+        'x-large': {'max': '1024px'},
+        'large': {'max': '991px'},
+        'medium': {'max': '768px'},
+        'small': {'max': '480px'},
+        'x-small': {'max': '320px'}
       },
       backgroundImage: {
         'banner-img': "url('./assets/banner-img.jpg')"

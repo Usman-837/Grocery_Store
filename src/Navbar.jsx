@@ -12,31 +12,31 @@ const Navbar = () => {
 
     return(
         <>
-        <header className="bg-white h-24 pt-8 flex justify-around shadow-md shadow-gray-300">
+        <header className="bg-white h-24 pt-8 flex justify-between shadow-md shadow-gray-300 small:px-4 medium:px-14 large:px-14 x-large:px-20 2x-large:px-24 px-28">
             {/* logo */}
-            <a href="" className=""><i className="fa-solid fa-basket-shopping text-[--green] text-xl"></i><span className="text-purple-800 text-2xl font-bold">Grocery</span></a>
+            <a href="#"><i className="fa-solid fa-basket-shopping text-[--green] text-xl small:text-md large:text-lg"></i><span className="text-purple-800 text-2xl small-text-lg large:text-xl font-bold">Grocery</span></a>
 
             {/* Menu Bar */}
-            <nav className="text-gray-700 md:hidden">
-                <a href="#" className="pl-8 hover:text-green-600">Home</a>
-                <a href="#" className="pl-8 hover:text-green-600">Features</a>
-                <a href="#" className="pl-8 hover:text-green-600">Products</a>
-                <a href="#" className="pl-8 hover:text-green-600">Categories</a>
-                <a href="#" className="pl-8 hover:text-green-600">Review</a>
-                <a href="#" className="pl-8 hover:text-green-600">Blogs</a>
+            <nav className="text-gray-700 medium:hidden large:text-sm">
+                <a href="#home" className="hover:text-green-600">Home</a>
+                <a href="#features" className="pl-8 x-large:pl-4 2x-large:pl-6 hover:text-green-600">Features</a>
+                <a href="#products" className="pl-8 x-large:pl-4 2x-large:pl-6 hover:text-green-600">Products</a>
+                <a href="#categories" className="pl-8 x-large:pl-4 2x-large:pl-6 hover:text-green-600">Categories</a>
+                <a href="#review" className="pl-8 x-large:pl-4 2x-large:pl-6 hover:text-green-600">Review</a>
+                <a href="#blogs" className="pl-8 x-large:pl-4 2x-large:pl-6 hover:text-green-600">Blogs</a>
             </nav>
           
             {/* icons */}
-            <div className="flex"> 
-                <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> {setSearch(!search); setShopcart(false); setLogin(false); setMenu(false)}}><i className="fa-solid fa-magnifying-glass"></i></div>
-                <div className="bg-gray-200 h-9 w-10 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> {setShopcart(!shopcart); setSearch(false); setLogin(false); setMenu(false)}}><i className="fa-solid fa-cart-shopping"></i></div>
-                <div className="bg-gray-200 h-9 w-10 mr-2  boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> {setLogin(!login); setSearch(false); setShopcart(false); setMenu(false)}}><i className="fa-solid fa-user"></i></div>
-                <div className="bg-gray-200 h-9 w-10 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white hidden md:block" onClick={()=> {setMenu(!menu); setSearch(false); setShopcart(false); setLogin(false)}}><i className="fa-solid fa-bars"></i></div>
+            <div className="flex small:text-sm"> 
+                <div className="bg-[#eee] h-9 small:h-8 w-10 small:w-9 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> {setSearch(!search); setShopcart(false); setLogin(false); setMenu(false)}}><i className="fa-solid fa-magnifying-glass"></i></div>
+                <div className="bg-[#eee] h-9 small:h-8 w-10 small:w-9 mr-2 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> {setShopcart(!shopcart); setSearch(false); setLogin(false); setMenu(false)}}><i className="fa-solid fa-cart-shopping"></i></div>
+                <div className="bg-[#eee] h-9 small:h-8 w-10 small:w-9 mr-2  boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white" onClick={()=> {setLogin(!login); setSearch(false); setShopcart(false); setMenu(false)}}><i className="fa-solid fa-user"></i></div>
+                <div className="bg-[#eee] h-9 small:h-8 w-10 small:w-9 boder rounded text-center pt-1.5 cursor-pointer hover:bg-[--green] hover:text-white hidden medium:block" onClick={()=> {setMenu(!menu); setSearch(false); setShopcart(false); setLogin(false)}}><i className="fa-solid fa-bars"></i></div>
             </div>
 
             {/* Seach Bar */}
             {
-                search ? <form className="absolute top-28 bg-white p-3 border rounded-lg w-96 text-gray-400 flex justify-between shadow-md shadow-gray-500 right-20 sm:right-0 sm:w-full">
+                search ? <form className="absolute top-28 small:top-24 bg-white p-3 border rounded-lg w-96 text-gray-400 flex justify-between shadow-md shadow-gray-500 right-32 small:right-0 large:right-16 x-large:right-24 2x-large:right-28 small:w-full">
                 <input type="search" id="search-box" placeholder="Search here ....." className="normal-case"/>
                 <label for="search-box"><i className="fa-solid fa-magnifying-glass hover:text-[--green] font-bold text-lg"></i></label>
                 </form> : null
@@ -44,37 +44,37 @@ const Navbar = () => {
             
             {/* Shopping Cart */}
             {
-                shopcart ? <div className="absolute top-28 bg-white p-3 border rounded-lg w-80 shadow-md shadow-gray-500 right-20 sm:right-12">
-                <div className="flex justify-between mt-2 p-2">
-                    <img src={watermelon} className="w-24"/>
-                    <div className="mt-6  mr-8">
-                        <p className="font-bold text-[--black]">watermelon</p>
-                        <span className="text-[--light-color] text-sm">$5.99/-</span>
-                        <span className="text-[--light-color] text-sm ml-6"> Qty:1</span>
+                shopcart ? <div className="absolute top-28 small:top-24 bg-white p-3 border rounded-lg w-80 small:w-72 shadow-md shadow-gray-500 z-50 right-32 small:right-4 large:right-16 x-large:right-24 2x-large:right-28 small:h-80">
+                <div className="flex justify-between mt-2 small:mt-0 p-2 small:p-0">
+                    <img src={watermelon} className="w-24 small:w-16"/>
+                    <div className="mt-6 small:mt-2 mr-8 small:mr-6">
+                        <p className="font-bold text-[--black] small:text-sm">watermelon</p>
+                        <span className="text-[--light-color] text-sm small:text-xs">$5.99/-</span>
+                        <span className="text-[--light-color] text-sm small:text-xs ml-6 small:ml-4"> Qty:1</span>
                     </div>
-                    <i className="fa-solid fa-trash mt-8 text-[--light-color] mr-4 text-lg"></i>
+                    <i className="fa-solid fa-trash mt-8 small:mt-4 text-[--light-color] mr-4 text-lg small:text-sm"></i>
                 </div>
-                <div className="flex justify-between p-2">
-                    <img src={onion} className="w-24"/>
-                    <div className="mt-6  mr-8">
-                        <p className="font-bold text-[--black]">Onion</p>
-                        <span className="text-[--light-color] text-sm">$4.99/-</span>
-                        <span className="text-[--light-color] text-sm ml-6"> Qty:1</span>
+                <div className="flex justify-between p-2 small:p-0">
+                    <img src={onion} className="w-24 small:w-16"/>
+                    <div className="mt-6 small:mt-2 mr-8 small:mr-6">
+                        <p className="font-bold text-[--black] small:text-sm">Onion</p>
+                        <span className="text-[--light-color] text-sm small:text-xs">$4.99/-</span>
+                        <span className="text-[--light-color] text-sm  small:text-xs ml-6 small:ml-4"> Qty:1</span>
                     </div>
-                    <i className="fa-solid fa-trash mt-8 text-[--light-color] mr-4 text-lg"></i>
+                    <i className="fa-solid fa-trash mt-8 small:mt-4 text-[--light-color] mr-4 text-lg small:text-sm"></i>
                 </div>
-                <div className="flex justify-between p-2">
-                    <img src={chicken} className="w-24"/>
-                    <div className="mt-6  mr-8">
-                        <p className="font-bold text-[--black]">Chicken</p>
-                        <span className="text-[--light-color] text-sm">$4.99/-</span>
-                        <span className="text-[--light-color] text-sm ml-6"> Qty:1</span>
+                <div className="flex justify-between p-2 small:p-0">
+                    <img src={chicken} className="w-24 small:w-16"/>
+                    <div className="mt-6 small:mt-2 mr-8 small:mr-6">
+                        <p className="font-bold text-[--black] small:text-sm">Chicken</p>
+                        <span className="text-[--light-color] text-sm small:text-xs">$4.99/-</span>
+                        <span className="text-[--light-color] text-sm small:text-xs ml-6 small:ml-4"> Qty:1</span>
                     </div>
-                    <i className="fa-solid fa-trash mt-8 text-[--light-color] mr-4 text-lg"></i>
+                    <i className="fa-solid fa-trash mt-8 small:mt-4 text-[--light-color] mr-4 text-lg small:text-sm"></i>
                 </div>
                 <div className="p-2">
-                    <p className="text-center text-2xl text-[--black]">Total : $17.95/-</p>
-                    <button className="btn w-full ">Checkout</button>
+                    <p className="text-center text-2xl text-[--black] small:text-lg">Total : $17.95/-</p>
+                    <button className="btn w-full small:text-sm">Checkout</button>
                 </div>
             </div> : null 
             } 
