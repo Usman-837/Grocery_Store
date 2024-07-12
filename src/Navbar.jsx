@@ -14,7 +14,7 @@ const Navbar = () => {
         <>
         <header className="bg-white h-24 pt-8 flex justify-between shadow-md shadow-gray-300 small:px-4 medium:px-14 large:px-14 x-large:px-20 2x-large:px-24 px-28">
             {/* logo */}
-            <a href="#"><i className="fa-solid fa-basket-shopping text-[--green] text-xl small:text-md large:text-lg"></i><span className="text-purple-800 text-2xl small-text-lg large:text-xl font-bold">Grocery</span></a>
+            <a href="#"><i className="fa-solid fa-basket-shopping text-[--green] text-xl small:text-md large:text-lg"></i><span className="text-purple-800 text-2xl small:text-lg large:text-xl font-bold">Grocery</span></a>
 
             {/* Menu Bar */}
             <nav className="text-gray-700 medium:hidden large:text-sm">
@@ -81,15 +81,15 @@ const Navbar = () => {
 
             {/* login Page    */}
             {
-                login ?  <div className="absolute top-28 bg-white border rounded-lg w-[360px] shadow-md shadow-gray-500 right-20 sm:right-10">
-                <div className="flex flex-col justify-center p-8">
-                    <h1 className="text-center font-bold text-[--black] text-2xl uppercase mb-4">login now</h1>
-                    <input type="email" placeholder="Enter your email" className="bg-gray-200 rounded-md p-2 text-[--light-color] normal-case mb-4"/>
-                    <input type="password" placeholder="Enter your password" className="bg-gray-200 rounded-md p-2 text-[--light-color] normal-case mb-4"/>
-                    <p className="text-[--light-color] text-center mb-2 text-[15px]">forget your password <a href="#" className="text-[--green] underline"> click here</a></p>
-                    <p className="text-[--light-color] text-center text-[15px]">don't have and account <a href="#" className="text-[--green] underline"> create now</a></p>
+                login ?  <div className="absolute top-28 bg-white border rounded-lg w-[360px] small:w-[260px] shadow-md shadow-gray-500 large:right-16 small:right-4 x-large:right-24 2x-large:right-28 right-32">
+                <div className="flex flex-col justify-center p-8 small:p-4">
+                    <h1 className="text-center font-bold text-[--black] text-2xl small:text-xl uppercase mb-4">login now</h1>
+                    <input type="email" placeholder="Enter your email" className="bg-[#eee] rounded-md p-2 text-[--light-color] normal-case mb-4 small:text-sm"/>
+                    <input type="password" placeholder="Enter your password" className="bg-[#eee] rounded-md p-2 text-[--light-color] normal-case mb-4 small:text-sm"/>
+                    <p className="text-[--light-color] text-center mb-2 text-[15px] small:text-xs">forget your password <a href="#" className="text-[--green] underline"> click here</a></p>
+                    <p className="text-[--light-color] text-center text-[15px] small:text-xs">don't have an account <a href="#" className="text-[--green] underline"> create now</a></p>
                     <div className="flex justify-center">
-                        <button className="btn w-52 text-[16px] capitalize">login now</button>
+                        <button className="btn w-52 small:w-36 small:p-2 text-[16px] small:text-sm capitalize">login now</button>
                     </div>
                 </div>
             </div> : null
